@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[node name="Lobby" type="Node2D"]
+
+[node name="DeskNavigation" type="Button" parent="."]
+text = "To Desk"
+position = Vector2(50, 100)
+
+[node name="ElevatorNavigation" type="Button" parent="."]
+text = "To Elevator"
+position = Vector2(150, 100)
+
+[node name="LargeDoorsNavigation" type="Button" parent="."]
+text = "To Large Doors"
+position = Vector2(250, 100)
+
+[connection signal="pressed" from="DeskNavigation" to="." method="_on_DeskNavigation_pressed"]
+[connection signal="pressed" from="ElevatorNavigation" to="." method="_on_ElevatorNavigation_pressed"]
+[connection signal="pressed" from="LargeDoorsNavigation" to="." method="_on_LargeDoorsNavigation_pressed"]
